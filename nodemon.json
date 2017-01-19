@@ -1,0 +1,24 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "watch": ["*.*"],
+  "ignore": [
+    ".git",
+    "node_modules/",
+    "public/"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "NUM_CPU": "1",
+    "SERVER_PORT": "3000",
+    "WEBPACK_DEV_SERVER_PORT": "3001",
+    "HOT_RELOADING": "true",
+    "MONGODB_URL": "mongodb://localhost/",
+    "MONGODB_PORT": "27017", 
+    "WEBPACK_DEV": "webpack.config.js"
+  },
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "ext": "js json html ejs"
+}
