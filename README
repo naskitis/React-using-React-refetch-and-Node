@@ -70,3 +70,8 @@ This software works but its kinda incomplete. Things I'm gonna improve over time
   you use it in a module.  Alternatively, i have to instead include the import React statement in each module.
   This will be done over the next few days and updated on github.
 
+  * Latency bug:
+   When using a lazy loader with react-refetch, its possible that a previous async call will override
+   a new async call which returns quicker.  I will have to look into ways to solve this when I get
+   a moment.
+   
