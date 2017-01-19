@@ -1,0 +1,72 @@
+Hi.
+
+This is a sample code that I have worked on during my spare time (for about hour or so after work each night,
+for the past few days.
+
+The software works. It allows you to search for movies, displaying the 10 top most relevant matches, 
+and then it allows you to select one to add to your browsers local storage.  The movie will be
+added to the favourite list.   You can sort the list by title, year and IMDB.
+
+When a movie is added for the first time, its IMDB will be shown as "loading", as we need to fetch
+that info from the server, using react-refresh.  Once the data arrives, it will update the rating.
+
+The software is not producation ready though. Here are some of the tasks remaining on my TODO list.
+I will be updating this repo periodically with the changes.
+
+
+INSTALL AND RUN 
+-----------------
+
+To run this software, you will need an ubuntu/linux console with node v7.4.0 installed.
+
+
+Type the following commands:
+
+node install;
+
+sudo npm install webpack -g
+sudo npm install nodemon -g
+
+nodemon;
+
+Open your browser (latest version of Google Chrome please) and point it to:
+
+http://localhost:3000
+
+Hot re-loading is enabled by default. 
+
+Things to do:
+
+This software works but its kinda incomplete. Things I'm gonna improve over time. 
+
+* improve eye candy .. make the site look a little nicer and improve UI.
+
+* Accessibility.  The site should be WCAG 2.0 level A compliant, where possible.
+
+* currently, only the first 10 matches are shown in the autocomplete dropdown feature.
+  I had planned to show a pagination feature that will allow the user to see the next/prev 
+  10 movie matches, etc.  I was planning to use react-router for this, coupled with react-refetch,
+  so that when the URL changes, react-refetch will automatically fetch the next 10 matches, then
+  react-router would refresh the autocomplete component.   The current code would need to be refactored
+  a little to accomodate this change, which given my current work committments, would probably take
+  me another 2 or 3 days to do  ... or maybe just 2 hours at most if working on this project exclusively.
+  
+  * Test cases:
+
+  Although this is just sample code, including test cases would still be valuable, especially
+  in a team/production environment. For example, you can use Mocha, Sinon, Chai and Enzyme to conduct 
+  automated tests, which can be run everytime you commit to the git repo.  
+
+  * Comments:
+  
+  Currently, the code doesnt have any comments in it.  
+
+  * AirBnB linter
+
+  I have incorporated AirBnB's lint config file in both webpack and in my Microsoft VS code IDE,
+  but some of the code will still need to be edited to comply. Trailing spaces, use of PropTypes, 
+  etc.. There are some parts of the linter which may require some editing to pass, for example, the "no-undef" test.  
+  'React' is included as a global in the webpack config file, so you dont have to include it manually every time
+  you use it in a module.  Alternatively, i have to instead include the import React statement in each module.
+  This will be done over the next few days and updated on github.
+
